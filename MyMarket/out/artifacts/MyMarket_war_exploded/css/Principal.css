@@ -1,0 +1,356 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html{
+
+}
+body {
+    width: 100%;
+  min-height: 100vh;
+  background-color: #004D86;
+
+}
+
+.main{
+    width: 100%;
+    transition: opacity 2s ease-in;
+    opacity: 0;
+    display: none;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+  margin: 0 24px;
+}
+.logo .menu-icon {
+  color: #333;
+  font-size: 24px;
+  margin-right: 14px;
+  cursor: pointer;
+}
+.logo .logo-name {
+  color: #333;
+  font-size: 22px;
+  font-weight: 500;
+  padding-left: 20px;
+}
+nav .sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 300px;
+  padding: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+nav.open .sidebar {
+  left: 0;
+}
+.sidebar .sidebar-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 16px;
+}
+.sidebar-content .list {
+  list-style: none;
+}
+.list .nav-link {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  padding: 14px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.lists .nav-link:hover {
+  background-color: #4070f4;
+}
+.nav-link .icon {
+  margin-right: 14px;
+  font-size: 20px;
+  color: #707070;
+}
+.nav-link .link {
+  font-size: 16px;
+  color: #707070;
+  font-weight: 400;
+}
+.lists .nav-link:hover .icon,
+.lists .nav-link:hover .link {
+  color: #fff;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 1000vh;
+  width: 200%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  background: rgba(0, 0, 0, 0.3);
+}
+nav.open ~ .overlay {
+  opacity: 1;
+  left: 300px;
+  pointer-events: auto;
+}
+
+.controlLabel{
+  color: #333;
+  font-size: 22px;
+  font-weight: 500;
+  padding-left: 30px;
+}
+
+.appFrame{
+  padding-top: 70px;
+    width: 117rem;
+}
+
+.mainApp{
+  height: 98%;
+  width: 98%;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  border: none;
+    background-color: #004D86;
+
+}
+
+
+.btn-user{
+  display: flex;
+  padding-left: 83rem;
+}
+
+.btn-logout{
+  display: flex;
+  padding-left: 1rem;
+}
+
+
+.btnlogout {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: red;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+  background: #e62222;
+ }
+ 
+ .btnlogout, .btnlogout span {
+  transition: 200ms;
+ }
+ 
+ .btnlogout .text {
+  transform: translateX(35px);
+  color: white;
+  font-weight: bold;
+ }
+ 
+ .btnlogout .icon {
+  position: absolute;
+  border-left: 1px solid #c41b1b;
+  transform: translateX(110px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ 
+ .btnlogout svg {
+  width: 15px;
+  fill: #eee;
+ }
+ 
+ .btnlogout:hover {
+  background: #ff3636;
+ }
+ 
+ .btnlogout:hover .text {
+  color: transparent;
+ }
+ 
+ .btnlogout:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+ }
+ 
+ .btnlogout:focus {
+  outline: none;
+ }
+ 
+ .btnlogout:active .icon svg {
+  transform: scale(0.8);
+ }
+
+ .btnUser {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #004D86;
+  background-image: url(../img/userW.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  width: 120px;
+  height: 50px;
+  transition: all 50ms;
+  cursor: pointer;
+ }
+ 
+ .btnUser span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+ }
+ 
+ .btnUser span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+ }
+ 
+ .btnUser:hover span {
+  padding-right: 15px;
+ }
+ 
+ .btnUser:hover span:after {
+  opacity: 1;
+  right: 0;
+ }
+
+ .responsive-form{
+     visibility: hidden;
+ }
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #004D86;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 1s linear infinite
+}
+.loader::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid #FFF;
+    animation: prixClipFix 2s linear infinite ;
+}
+
+@keyframes rotate {
+    100%   {transform: rotate(360deg)}
+}
+
+@keyframes prixClipFix {
+    0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+    25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+    100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+}
+
+@media (max-width: 1726px) {
+    .btn-user{
+        padding-left: 65vw;
+        transition: 200ms;
+    }
+}
+
+@media (max-width: 1491px) {
+    .btn-user{
+        padding-left: 60vw;
+        transition: 200ms;
+    }
+}
+
+@media (max-width: 1298px) {
+    .btn-user{
+        padding-left: 50vw;
+        transition: 200ms;
+    }
+}
+
+@media (max-width: 1038px) {
+    .btn-user{
+        padding-left: 40vw;
+        transition: 200ms;
+    }
+}
+
+@media (max-width: 859px) {
+    .btn-user{
+        padding-left: 30vw;
+        transition: 200ms;
+    }
+}
+
+@media (max-width: 720px) {
+    .btn-user{
+        padding-left: 30px;
+        width: 50px;
+        transition: 200ms;
+    }
+    .btn-logout{
+        visibility: hidden;
+    }
+
+    .responsive-form{
+        visibility: visible;
+    }
+}
+
+
+
+
+
